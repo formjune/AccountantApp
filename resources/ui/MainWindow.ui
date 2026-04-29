@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>653</width>
+    <height>505</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kokodi</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLineEdit" name="line_budget">
+      <property name="maximumSize">
+       <size>
+        <width>120</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QPushButton" name="btn_tags">
+      <property name="maximumSize">
+       <size>
+        <width>61</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>tags</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLineEdit" name="line_tags"/>
+    </item>
+    <item row="0" column="5">
+     <widget class="QLineEdit" name="line_date_end">
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="line_date">
+      <property name="maximumSize">
+       <size>
+        <width>120</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QLineEdit" name="line_date_start">
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="6">
+     <widget class="QPushButton" name="btn_date">
+      <property name="maximumSize">
+       <size>
+        <width>61</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>date</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="7">
+     <widget class="QWidget" name="wdg_tables" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QWidget" name="wdg_spending" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout"/>
+         </widget>
+         <widget class="QWidget" name="wdg_transfer" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_2"/>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>653</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menudatabase">
+    <property name="title">
+     <string>dialogs</string>
+    </property>
+    <addaction name="action_add_spending"/>
+    <addaction name="action_add_personal_spending"/>
+    <addaction name="action_add_income"/>
+    <addaction name="action_add_reward"/>
+    <addaction name="action_add_commission"/>
+    <addaction name="action_add_staff"/>
+    <addaction name="action_add_staff_wallet"/>
+    <addaction name="action_set_new_salary"/>
+    <addaction name="action_dismiss_staff"/>
+    <addaction name="separator"/>
+    <addaction name="action_budget"/>
+    <addaction name="action_reload_dialogs"/>
+   </widget>
+   <widget class="QMenu" name="menuedit">
+    <property name="title">
+     <string>sql</string>
+    </property>
+    <addaction name="action_commit"/>
+    <addaction name="action_load_edit"/>
+    <addaction name="separator"/>
+    <addaction name="action_find_transfers"/>
+    <addaction name="action_create_repeat_spending"/>
+    <addaction name="action_delete_transfer_duplicates"/>
+    <addaction name="action_auto_close_transactions"/>
+    <addaction name="action_auto_distribute_salaries"/>
+    <addaction name="separator"/>
+    <addaction name="action_report_unpaid_spending"/>
+    <addaction name="action_report_user_income"/>
+    <addaction name="action_report_unpaid_salaries"/>
+    <addaction name="action_monthly_report"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menutables">
+    <property name="title">
+     <string>tables</string>
+    </property>
+    <addaction name="action_spending"/>
+    <addaction name="action_regular_spending"/>
+    <addaction name="action_onetime_spending"/>
+    <addaction name="action_personal_spending"/>
+    <addaction name="separator"/>
+    <addaction name="action_income"/>
+    <addaction name="action_income_type"/>
+    <addaction name="action_reward"/>
+    <addaction name="separator"/>
+    <addaction name="action_promotion_source"/>
+    <addaction name="action_promotion_commission"/>
+    <addaction name="separator"/>
+    <addaction name="action_transfers_all"/>
+    <addaction name="action_transfer_wallets"/>
+    <addaction name="separator"/>
+    <addaction name="action_staff"/>
+    <addaction name="action_staff_wallets"/>
+    <addaction name="action_department"/>
+    <addaction name="action_off_days_percent"/>
+    <addaction name="action_date_ranges"/>
+    <addaction name="action_tags"/>
+    <addaction name="action_salary_history"/>
+   </widget>
+   <addaction name="menudatabase"/>
+   <addaction name="menutables"/>
+   <addaction name="menuedit"/>
+  </widget>
+  <action name="action_commit">
+   <property name="text">
+    <string>commit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="action_drop">
+   <property name="text">
+    <string>drop</string>
+   </property>
+  </action>
+  <action name="action_update_formatter">
+   <property name="text">
+    <string>update formatter</string>
+   </property>
+  </action>
+  <action name="action_budget">
+   <property name="text">
+    <string>recalculate budget</string>
+   </property>
+  </action>
+  <action name="action_load_edit">
+   <property name="text">
+    <string>reload</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="action_add_spending">
+   <property name="text">
+    <string>add spending</string>
+   </property>
+  </action>
+  <action name="action_add_income">
+   <property name="text">
+    <string>add income</string>
+   </property>
+  </action>
+  <action name="action_add_income_type">
+   <property name="text">
+    <string>add income type</string>
+   </property>
+  </action>
+  <action name="action_reload_dialogs">
+   <property name="text">
+    <string>reload dialogs</string>
+   </property>
+  </action>
+  <action name="action_auto_reload">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>auto reload</string>
+   </property>
+  </action>
+  <action name="action_add_staff">
+   <property name="text">
+    <string>add staff member</string>
+   </property>
+  </action>
+  <action name="action_dismiss_staff">
+   <property name="text">
+    <string>dismiss staff member</string>
+   </property>
+  </action>
+  <action name="action_spending">
+   <property name="text">
+    <string>spending</string>
+   </property>
+  </action>
+  <action name="action_regular_spending">
+   <property name="text">
+    <string>regular spending</string>
+   </property>
+  </action>
+  <action name="action_onetime_spending">
+   <property name="text">
+    <string>onetime spending</string>
+   </property>
+  </action>
+  <action name="action_personal_spending">
+   <property name="text">
+    <string>personal spending</string>
+   </property>
+  </action>
+  <action name="action_income">
+   <property name="text">
+    <string>income</string>
+   </property>
+  </action>
+  <action name="action_income_type">
+   <property name="text">
+    <string>income type</string>
+   </property>
+  </action>
+  <action name="action_promotion_source">
+   <property name="text">
+    <string>promotion source</string>
+   </property>
+  </action>
+  <action name="action_promotion_commission">
+   <property name="text">
+    <string>promotion commission</string>
+   </property>
+  </action>
+  <action name="action_staff">
+   <property name="text">
+    <string>staff</string>
+   </property>
+  </action>
+  <action name="action_tags">
+   <property name="text">
+    <string>tags</string>
+   </property>
+  </action>
+  <action name="action_set_new_salary">
+   <property name="text">
+    <string>set new salary</string>
+   </property>
+  </action>
+  <action name="action_transfers_all">
+   <property name="text">
+    <string>transfers all</string>
+   </property>
+  </action>
+  <action name="action_transfer_wallets">
+   <property name="text">
+    <string>transfer wallets</string>
+   </property>
+  </action>
+  <action name="action_find_transfers">
+   <property name="text">
+    <string>find transfers</string>
+   </property>
+  </action>
+  <action name="action_create_repeat_spending">
+   <property name="text">
+    <string>create repeat spending</string>
+   </property>
+  </action>
+  <action name="action_add_commission">
+   <property name="text">
+    <string>add commission</string>
+   </property>
+  </action>
+  <action name="action_transfers">
+   <property name="text">
+    <string>transfers</string>
+   </property>
+  </action>
+  <action name="action_add_personal_spending">
+   <property name="text">
+    <string>add personal spending</string>
+   </property>
+  </action>
+  <action name="action_department">
+   <property name="text">
+    <string>department</string>
+   </property>
+  </action>
+  <action name="action_off_days_percent">
+   <property name="text">
+    <string>off days percent</string>
+   </property>
+  </action>
+  <action name="action_date_ranges">
+   <property name="text">
+    <string>date ranges</string>
+   </property>
+  </action>
+  <action name="action_add_reward">
+   <property name="text">
+    <string>add staff reward</string>
+   </property>
+  </action>
+  <action name="action_reward">
+   <property name="text">
+    <string>reward</string>
+   </property>
+  </action>
+  <action name="action_staff_wallets">
+   <property name="text">
+    <string>staff wallets</string>
+   </property>
+  </action>
+  <action name="action_delete_transfer_duplicates">
+   <property name="text">
+    <string>delete transfer duplicates</string>
+   </property>
+  </action>
+  <action name="action_report_unpaid_spending">
+   <property name="text">
+    <string>report unpaid spending</string>
+   </property>
+  </action>
+  <action name="action_add_staff_wallet">
+   <property name="text">
+    <string>add staff wallet</string>
+   </property>
+  </action>
+  <action name="action_report_user_income">
+   <property name="text">
+    <string>report user income</string>
+   </property>
+  </action>
+  <action name="action_report_unpaid_salaries">
+   <property name="text">
+    <string>report unpaid salaries</string>
+   </property>
+  </action>
+  <action name="action_auto_close_transactions">
+   <property name="text">
+    <string>auto close transactions</string>
+   </property>
+  </action>
+  <action name="action_auto_distribute_salaries">
+   <property name="text">
+    <string>auto distribute salaries</string>
+   </property>
+  </action>
+  <action name="action_monthly_report">
+   <property name="text">
+    <string>Monthly Report</string>
+   </property>
+  </action>
+  <action name="action_salary_history">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>salary history</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

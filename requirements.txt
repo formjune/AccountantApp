@@ -1,0 +1,6 @@
+python-dateutil
+psycopg2
+sqlalchemy
+PyQt5
+matplotlib
+web3

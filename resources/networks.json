@@ -1,0 +1,79 @@
+{
+  "mainnet":
+  {
+    "type": "url",
+    "url": "https://api.etherscan.io/api",
+    "prefix": "https://etherscan.io/tx/",
+    "divider": 1e6,
+    "tokens": {
+      "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48": "USDC",
+      "0xdAC17F958D2ee523a2206206994597C13D831ec7": "USDT"
+    }
+  },
+  "binance":
+  {
+    "type": "url",
+    "url": "https://api.bscscan.com/api",
+    "prefix": "https://bscscan.com/tx/",
+    "divider": 1e18,
+    "tokens": {
+      "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d": "USDC",
+      "0x55d398326f99059fF775485246999027B3197955": "BSC-USD"
+    }
+  },
+  "polygon":
+  {
+    "type": "url",
+    "url": "https://api.polygonscan.com/api",
+    "prefix": "https://polygonscan.com/tx/",
+    "divider": 1e6,
+    "tokens": {
+      "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359": "USDC",
+      "0xc2132D05D31c914a87C6611C10748AEb04B58e8F": "USDT"
+    }
+  },
+  "arbitrum":
+  {
+    "type": "url",
+    "url": "https://api.arbiscan.io/api",
+    "prefix": "https://arbiscan.io/tx/",
+    "divider": 1e6,
+    "tokens":
+    {
+      "0xaf88d065e77c8cC2239327C5EDb3A432268e5831": "USDC",
+      "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9": "USDT"
+    }
+  },
+  "avalanche": {
+    "type": "web3",
+    "prefix": "https://avascan.info/blockchain/shrapnel/tx/",
+    "poa": true,
+    "divider": 1e6,
+    "tokens": {
+      "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7": "USDT",
+      "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E": "USDC"
+    }
+  },
+  "optimism":
+  {
+    "type": "url",
+    "url": "https://api-optimistic.etherscan.io/api",
+    "prefix": "https://optimistic.etherscan.io/tx/",
+    "divider": 1e6,
+    "tokens":
+    {
+      "0x7F5c764cBc14f9669B88837ca1490cCa17c31607": "USDC",
+      "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58": "USDT"
+    }
+  },
+  "base": {
+  "type":     "url",
+  "url":      "https://api.basescan.org/api",
+  "prefix":   "https://basescan.org/tx/",
+  "divider":  1e6,                       
+  "tokens": {
+    "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913":  "USDC",
+    "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2":  "USDT"
+  }
+}
+}
